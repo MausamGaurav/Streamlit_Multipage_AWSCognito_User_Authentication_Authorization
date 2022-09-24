@@ -1,7 +1,7 @@
 # Streamlit_Multipage_AWSCognito_User_Authentication_Authorization
 
-1) The authenticate.py file is in the 'Components' directory.
-2) Before importing the authenticate.py file, we need to create a .env file in the 'Components' directory with the correct values of the following variables. So, contents of the .env file might look like:
+1) The authenticate.py file is in the 'components' directory.
+2) Before importing the authenticate.py file, we need to create a .env file in the 'components' directory with the correct values of the following variables. So, contents of the .env file might look like:
 
 ```
 COGNITO_DOMAIN = "https://myappauthentication.auth.us-east-1.amazoncognito.com"
