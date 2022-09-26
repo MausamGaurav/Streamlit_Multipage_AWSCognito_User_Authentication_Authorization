@@ -2,7 +2,7 @@ import streamlit as st
 import components.authenticate as authenticate
 
 st.set_page_config(
-    page_title="Hello",
+    page_title="Home",
     page_icon="👋",
 )
 
