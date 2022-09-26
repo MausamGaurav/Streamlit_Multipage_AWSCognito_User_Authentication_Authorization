@@ -168,13 +168,15 @@ def get_user_cognito_groups(id_token):
     Returns:
         user_cognito_groups: a list of all the cognito groups the user belongs to.
     """
+    user_cognito_groups = []
     if id_token != "":
         header, payload, signature = id_token.split(".")
         printable_payload = base64.urlsafe_b64decode(pad_base64(payload))
         payload_dict = json.loads(printable_payload)
-        user_cognito_groups = list(dict(payload_dict)["cognito:groups"])
-    else:
-        user_cognito_groups = []
+        try:
+            user_cognito_groups = list(dict(payload_dict)["cognito:groups"])
+        except (KeyError, TypeError):
+            pass
     return user_cognito_groups
 
 
