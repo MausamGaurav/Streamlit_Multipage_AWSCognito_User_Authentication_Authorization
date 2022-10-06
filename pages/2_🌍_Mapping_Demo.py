@@ -112,6 +112,6 @@ if (
         )
 else:
     if st.session_state["authenticated"]:
-        st.write("You donot have access. Please contact the administrator.")
+        st.write("You do not have access. Please contact the administrator.")
     else:
         st.write("Please login!")
