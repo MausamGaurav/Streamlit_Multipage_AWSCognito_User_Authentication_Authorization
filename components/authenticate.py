@@ -43,9 +43,9 @@ def get_auth_code():
     Returns:
         Nothing.
     """
-    auth_query_params = st.experimental_get_query_params()
     try:
-        auth_code = dict(auth_query_params)["code"][0]
+        auth_query_params = st.query_params.to_dict()
+        auth_code = auth_query_params.get("code", "")
     except (KeyError, TypeError):
         auth_code = ""
 
